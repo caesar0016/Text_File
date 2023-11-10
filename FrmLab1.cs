@@ -31,7 +31,7 @@ namespace Text_File
             string getInput = txtInput.Text;
 
             string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, FrmFileName.SetFileName)))
+            using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, frmFileName.setFileName)))
             {
                 outputFile.WriteLine(getInput);
                 Console.WriteLine(getInput);

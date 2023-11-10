@@ -16,8 +16,8 @@ namespace Text_File
         {
             InitializeComponent();
         }
-
         public static string setFileName;
+
         private void btnOkay_Click(object sender, EventArgs e)
         {
             setFileName = txtFileName.Text;
