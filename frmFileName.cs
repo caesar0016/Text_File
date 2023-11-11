@@ -23,11 +23,9 @@ namespace Text_File
         private void btnOkay_Click(object sender, EventArgs e)
         {
             setFileName = txtFileName.Text + ".txt";
-            this.Hide();
-            //Close();
+            FrmRegistration r1 = new FrmRegistration();
+            r1.ShowDialog();
+
         }
     }
 }
-
-
-//"C:\Users\dapit\Downloads

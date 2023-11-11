@@ -84,6 +84,14 @@
             // cmbProgram
             // 
             this.cmbProgram.FormattingEnabled = true;
+            this.cmbProgram.Items.AddRange(new object[] {
+            "Bachelor of Arts in History",
+            "Bachelor of Science in Psychology",
+            "Bachelor of Science in Criminology",
+            "Bachelor of Arts in Political Science ",
+            "Bachelor of Arts in Literature",
+            "Bachelor of Science in Computer Science",
+            "Bachelor of Science in Information Technology"});
             this.cmbProgram.Location = new System.Drawing.Point(504, 83);
             this.cmbProgram.Name = "cmbProgram";
             this.cmbProgram.Size = new System.Drawing.Size(269, 21);
@@ -241,7 +249,7 @@
             this.btnAuto.Name = "btnAuto";
             this.btnAuto.Size = new System.Drawing.Size(123, 41);
             this.btnAuto.TabIndex = 21;
-            this.btnAuto.Text = "Auto";
+            this.btnAuto.Text = "Clear";
             this.btnAuto.UseVisualStyleBackColor = false;
             this.btnAuto.Click += new System.EventHandler(this.btnAuto_Click);
             // 

@@ -20,28 +20,15 @@ namespace Text_File
 
         private void btnAuto_Click(object sender, EventArgs e)
         {
-            autoFill();
-        }
-
-
-        void autoFill() {
-
-            txtStudentNo.Text = 200002686.ToString();
-            txtLastName.Text = "Mondragon";
-            txtFirstName.Text = "Xiao";
-            txtMiddleInitial.Text = "G";
-            txtAge.Text = 26.ToString();
-            cmbGender.Text = "Male";
-            dtPickerBday.Value = DateTime.Today;
-            txtContactNo.Text = 099999999123.ToString();
-            cmbProgram.Text = "Bsit";
+            clear();
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            autoFill();
-            string[] registeredInfo = { txtStudentNo.Text, txtLastName.Text, txtFirstName.Text, txtMiddleInitial.Text,
-            txtAge.Text, txtAge.Text, cmbGender.Text, dtPickerBday.Text, txtContactNo.Text, cmbProgram.Text};
+            try {
+
+            string[] registeredInfo = {"Student No: " + txtStudentNo.Text, "Full Name: " + txtLastName.Text + " " + txtFirstName.Text + " " +  txtMiddleInitial.Text, "Age: " +
+            txtAge.Text, "Gender: " + cmbGender.Text, "Birthday: " + dtPickerBday.Text, "Contact No: " + txtContactNo.Text, "Program: " + cmbProgram.SelectedItem};
 
             string docPath2 = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             StreamWriter outputFile = new StreamWriter(Path.Combine(docPath2, frmFileName.setFileName));
@@ -51,8 +38,31 @@ namespace Text_File
             foreach (string info in registeredInfo) {
                 outputFile.WriteLine(info);
             }
-            this.Close();
+
             outputFile.Close();
+
+            }
+            catch (Exception ex) {
+
+                Console.WriteLine("Error: " + ex.Message);
+
+            }
+            MessageBox.Show("Registered Successfully");
+
+            clear();
+        }
+
+        void clear() {
+
+            txtStudentNo.Text = "";
+            txtLastName.Text = "";
+            txtFirstName.Text = "";
+            txtMiddleInitial.Text = "";
+            txtAge.Text = "";
+            cmbGender.Text = "";
+            txtContactNo.Text = "";
+            cmbProgram.Text = "";
+
         }
     }
 }

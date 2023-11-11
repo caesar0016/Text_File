@@ -18,11 +18,6 @@ namespace Text_File
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCreate_Click(object sender, EventArgs e)
         {   
             //Step 3 instantiate and declare string
@@ -39,14 +34,8 @@ namespace Text_File
                 Console.WriteLine(getInput);
                 outputFile.Close();
             }
-            this.Hide();
-            FrmRegistration r1 = new FrmRegistration();
-            r1.ShowDialog();
-        }
-
-        private void FrmLab1_Load(object sender, EventArgs e)
-        {
 
         }
+
     }
 }

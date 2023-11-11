@@ -39,7 +39,6 @@
             this.txtInput.Name = "txtInput";
             this.txtInput.Size = new System.Drawing.Size(223, 48);
             this.txtInput.TabIndex = 0;
-            this.txtInput.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // btnCreate
             // 
@@ -64,7 +63,6 @@
             this.Controls.Add(this.txtInput);
             this.Name = "FrmLab1";
             this.Text = "FrmLab1";
-            this.Load += new System.EventHandler(this.FrmLab1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
