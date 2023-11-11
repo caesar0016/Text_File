@@ -38,7 +38,13 @@ namespace Text_File
             {
                 outputFile.WriteLine(getInput);
                 Console.WriteLine(getInput);
+                
             }
+        }
+
+        private void FrmLab1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

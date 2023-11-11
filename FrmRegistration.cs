@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,14 +35,27 @@ namespace Text_File
             dtPickerBday.Value = DateTime.Today;
             txtContactNo.Text = 099999999123.ToString();
             cmbProgram.Text = "Bsit";
-        
-        
-        
+
+
+
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Registered Successfully");
+
+            string[] registeredInfo = { txtStudentNo.Text, txtLastName.Text, txtFirstName.Text, txtMiddleInitial.Text,
+            txtAge.Text, txtAge.Text, cmbGender.Text, dtPickerBday.Text, txtContactNo.Text, cmbProgram.Text};
+
+            string docPath2 = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            StreamWriter outputFile = new StreamWriter(Path.Combine(docPath2, frmFileName.setFileName));
+
+            outputFile.WriteLine(txtStudentNo.Text);
+
+            foreach (string info in registeredInfo) { 
+            
+                outputFile.WriteLine(info);
+            
+            }
         }
     }
 }
