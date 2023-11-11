@@ -26,8 +26,11 @@ namespace Text_File
         private void btnCreate_Click(object sender, EventArgs e)
         {   
             //Step 3 instantiate and declare string
+            //a. Declare instance frmFIleName
             frmFileName f1 = new frmFileName();
+            f1.ShowDialog();
 
+            //b Get the value to getInput
             string getInput = txtInput.Text;
 
             string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);

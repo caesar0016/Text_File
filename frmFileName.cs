@@ -18,10 +18,17 @@ namespace Text_File
         }
         public static string setFileName;
 
+
+        //6. Click the okay button
         private void btnOkay_Click(object sender, EventArgs e)
         {
-            setFileName = txtFileName.Text;
-            Close();
+
+            setFileName = txtFileName.Text + ".txt";
+            //Close();
+            MessageBox.Show(setFileName);
         }
     }
 }
+
+
+//"C:\Users\dapit\Downloads
