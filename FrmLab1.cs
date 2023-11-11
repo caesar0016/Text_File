@@ -29,7 +29,6 @@ namespace Text_File
             //a. Declare instance frmFIleName
             frmFileName f1 = new frmFileName();
             f1.ShowDialog();
-
             //b Get the value to getInput
             string getInput = txtInput.Text;
 
@@ -38,8 +37,11 @@ namespace Text_File
             {
                 outputFile.WriteLine(getInput);
                 Console.WriteLine(getInput);
-                
+                outputFile.Close();
             }
+            this.Hide();
+            FrmRegistration r1 = new FrmRegistration();
+            r1.ShowDialog();
         }
 
         private void FrmLab1_Load(object sender, EventArgs e)

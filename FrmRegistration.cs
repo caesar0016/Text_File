@@ -35,14 +35,11 @@ namespace Text_File
             dtPickerBday.Value = DateTime.Today;
             txtContactNo.Text = 099999999123.ToString();
             cmbProgram.Text = "Bsit";
-
-
-
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-
+            autoFill();
             string[] registeredInfo = { txtStudentNo.Text, txtLastName.Text, txtFirstName.Text, txtMiddleInitial.Text,
             txtAge.Text, txtAge.Text, cmbGender.Text, dtPickerBday.Text, txtContactNo.Text, cmbProgram.Text};
 
@@ -56,6 +53,7 @@ namespace Text_File
                 outputFile.WriteLine(info);
             
             }
+            this.Close();
         }
     }
 }

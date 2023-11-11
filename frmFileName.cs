@@ -22,10 +22,9 @@ namespace Text_File
         //6. Click the okay button
         private void btnOkay_Click(object sender, EventArgs e)
         {
-
             setFileName = txtFileName.Text + ".txt";
+            this.Hide();
             //Close();
-            MessageBox.Show(setFileName);
         }
     }
 }
