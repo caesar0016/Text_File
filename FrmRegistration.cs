@@ -48,12 +48,11 @@ namespace Text_File
 
             outputFile.WriteLine(txtStudentNo.Text);
 
-            foreach (string info in registeredInfo) { 
-            
+            foreach (string info in registeredInfo) {
                 outputFile.WriteLine(info);
-            
             }
             this.Close();
+            outputFile.Close();
         }
     }
 }
