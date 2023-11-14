@@ -16,33 +16,42 @@ namespace Text_File
         public FrmOpenFile()
         {
             InitializeComponent();
+           
         }
 
         private void btnOpen_Click(object sender, EventArgs e)
         {
-
+            DisplayToList();
         }
 
-        void DisplayToList() {
-
-            openFileDialog1.InitialDirectory = @"C:\";
+        void DisplayToList()
+        {
+            openFileDialog1.InitialDirectory = @"C:\Users\HomePC\Documents\Event-File";
             openFileDialog1.Title = "Browse Text Files";
             openFileDialog1.DefaultExt = "txt";
-            openFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            openFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";O
             openFileDialog1.ShowDialog();
-            path = openFileDialog1.FileName;
-            using (StreamReader streamReader = File.OpenText(path))
+
+            string path = openFileDialog1.FileName;
+
+            if (File.Exists(path))
             {
-                string _getText = "";
-                while ((_getText = streamReader.ReadLine()) != null)
+                using (StreamReader streamReader = File.OpenText(path))
                 {
-                    Console.WriteLine(_getText);
-                    lvShowText.Items.Add(_getText);
+                    string _getText = "";
+                    while ((_getText = streamReader.ReadLine()) != null)
+                    {
+                        Console.WriteLine(_getText);
+                        
+                    }
                 }
             }
-
-
+            else
+            {
+                MessageBox.Show("File Doesn't Exist");
+            }
         }
+
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
@@ -50,6 +59,11 @@ namespace Text_File
         }
 
         private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void lvShowText_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

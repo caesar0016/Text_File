@@ -37,11 +37,13 @@
             // lvShowText
             // 
             this.lvShowText.HideSelection = false;
-            this.lvShowText.Location = new System.Drawing.Point(12, 77);
+            this.lvShowText.Location = new System.Drawing.Point(16, 95);
+            this.lvShowText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lvShowText.Name = "lvShowText";
-            this.lvShowText.Size = new System.Drawing.Size(556, 228);
+            this.lvShowText.Size = new System.Drawing.Size(740, 280);
             this.lvShowText.TabIndex = 0;
             this.lvShowText.UseCompatibleStateImageBehavior = false;
+            this.lvShowText.SelectedIndexChanged += new System.EventHandler(this.lvShowText_SelectedIndexChanged);
             // 
             // btnClose
             // 
@@ -49,9 +51,10 @@
             this.btnClose.BackColor = System.Drawing.Color.IndianRed;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(488, 2);
+            this.btnClose.Location = new System.Drawing.Point(651, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(90, 35);
+            this.btnClose.Size = new System.Drawing.Size(120, 43);
             this.btnClose.TabIndex = 2;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -62,9 +65,10 @@
             this.btnOpen.BackColor = System.Drawing.Color.IndianRed;
             this.btnOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOpen.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOpen.Location = new System.Drawing.Point(245, 311);
+            this.btnOpen.Location = new System.Drawing.Point(327, 383);
+            this.btnOpen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(90, 35);
+            this.btnOpen.Size = new System.Drawing.Size(120, 43);
             this.btnOpen.TabIndex = 3;
             this.btnOpen.Text = "Open";
             this.btnOpen.UseVisualStyleBackColor = false;
@@ -77,14 +81,15 @@
             // 
             // FrmOpenFile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(580, 362);
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.ClientSize = new System.Drawing.Size(773, 446);
             this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lvShowText);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmOpenFile";
             this.Text = "FrmOpenTextFile";
             this.ResumeLayout(false);

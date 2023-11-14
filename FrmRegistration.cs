@@ -27,7 +27,8 @@ namespace Text_File
         {
             try {
 
-            string[] registeredInfo = {"Student No: " + txtStudentNo.Text, "Full Name: " + txtLastName.Text + " " + txtFirstName.Text + " " +  txtMiddleInitial.Text, "Age: " +
+            string[] registeredInfo = {"Student No: " + txtStudentNo.Text, "Full Name: " + txtLastName.Text + " " + txtFirstName.Text + " " +  
+                        txtMiddleInitial.Text, "Age: " +
             txtAge.Text, "Gender: " + cmbGender.Text, "Birthday: " + dtPickerBday.Text, "Contact No: " + txtContactNo.Text, "Program: " + cmbProgram.SelectedItem};
 
             string docPath2 = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
@@ -63,6 +64,15 @@ namespace Text_File
             txtContactNo.Text = "";
             cmbProgram.Text = "";
 
+        }
+
+        private void btnRecords_Click(object sender, EventArgs e)
+        {
+            FrmStudentRecord frmRecord = new FrmStudentRecord();
+            frmRecord.Show();
+            this.Hide();
+            
+            
         }
     }
 }
